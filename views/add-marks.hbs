@@ -1,0 +1,64 @@
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Student Marks Entry Form</h2>
+        <form method="post" action="">
+            <!-- Student Registration Number -->
+            <div class="form-group">
+                <label for="regNo">Student Reg. No</label>
+                <input type="text" class="form-control" id="regNo" placeholder="Enter Registration Number" required value="1040" name="regNo">
+            </div>
+
+            <!-- Student Name -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Student Name" required value="Muhammed" name="stName">
+            </div>
+
+            <!-- Class -->
+            <div class="form-group">
+                <label for="class">Class</label>
+                <input type="text" class="form-control" id="class" placeholder="Enter Class" required value="9" name="stClass">
+            </div>
+
+            <!-- Marks Section -->
+            <div class="form-group">
+                <label for="maths">Marks in Maths</label>
+                <input type="text" class="form-control" id="maths" placeholder="Enter Maths Marks" required value="1" name="maths">
+            </div>
+            <div class="form-group">
+                <label for="english">Marks in English</label>
+                <input type="number" class="form-control" id="english" placeholder="Enter English Marks" required value="2" name="english">
+            </div>
+            <div class="form-group">
+                <label for="science">Marks in Science</label>
+                <input type="number" class="form-control" id="science" placeholder="Enter Science Marks" required value="3" name="science">
+            </div>
+            <div class="form-group">
+                <label for="it">Marks in IT</label>
+                <input type="number" class="form-control" id="it" placeholder="Enter IT Marks" required value="4" name="IT">
+            </div>
+            <div class="form-group">
+                <label for="social">Marks in Social</label>
+                <input type="number" class="form-control" id="social" placeholder="Enter Social Marks" required value="5" name="social">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+        <script>
+        
+
+        $(document).ready(function(){
+            $("#maths").blur(function(){
+                var mark = $(this).val()
+                if(isNaN(mark)){
+                    alert('Please enter only a number!')
+                }
+            })
+        })
+        </script>
+        
+    </div>
+</body>
